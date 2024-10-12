@@ -18,7 +18,7 @@ int main(){
 	printf("\nFatoriais dos números\n");
 	for(c = 0; c < 5; c++){
 		printf("%d ", v2[c]);
-    }
+        }
 	return(0);
 }
 
