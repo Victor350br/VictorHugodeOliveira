@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<locale.h>
+void fibonacci(int num);
+int main(){
+	setlocale(LC_ALL, "Portuguese");
+	printf(">>> Sequência Fibonacci <<<\n");
+	int num = 0;
+	do{
+		printf("Quantos termos deseja mostrar? ");
+		scanf("%d", &num);
+	}while(num <= 0);
+	fibonacci(num);
+	return(0);
+}
+void fibonacci(int num){
+	int suc = 1, ant = 0, soma = 0, c = 0;
+	if(num == 1){
+		printf("0 ");
+	}else if(num == 2){
+		printf("0 1 ");
+	}else if(num > 2){
+		printf("0 1 ");
+		for(c = 0; c < num-2; c++){
+			soma = suc + ant;
+			printf("%d ", soma);
+			ant = suc;
+			suc = soma;
+		}
+	}
+}
